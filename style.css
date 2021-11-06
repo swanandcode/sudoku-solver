@@ -1,0 +1,72 @@
+html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+body {
+    font-family: sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell {
+    user-select: none;
+    outline: none;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+    background: unset;
+    /* font-weight: bold; */
+}
+.cell.auto {
+    color: blue;
+    font-weight: unset;
+}
+.cell.focus {
+    background: #e0f1ff;
+}
+#controls {
+    margin-top: 10px;
+}
+#inp_paste {
+    width: 67px;
+    caret-color: transparent;
+}
+#container {
+    display: grid;
+}
+#msg_board {
+    display: flex;
+    width: 370px;
+    margin-top: 10px;
+    font-size: small;
+}
+#message {
+    flex-grow: 1;
+}
+#navs {
+    user-select: none;
+}
+.nav {
+    display: none;
+    cursor: pointer;
+}
+#puzzle.solved .nav {
+    display: unset;
+    visibility: hidden;
+}
+#puzzle.solved .nav.visible {
+    visibility: unset;
+}
+#nav_next {
+    margin-left: 10px;
+}
+.error {
+    color: red;
+}
+button {
+    width: 65px;
+}
